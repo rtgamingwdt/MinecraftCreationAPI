@@ -8,7 +8,7 @@ const app = express();
 GlobalFonts.registerFromPath(join(__dirname + "/static/fonts/MinecraftBold-nMK1.otf"), "MinecraftBold");
 GlobalFonts.registerFromPath(join(__dirname + "/static/fonts/MinecraftRegular-Bmg3.otf"), "MinecraftRegular");
 
-app.get("/advancement", async (req, res) => {
+app.get("/api/advancement", async (req, res) => {
     let { item, title, message, color } = req.query;
     const canvas = createCanvas(340, 64);
     const ctx = canvas.getContext('2d');
