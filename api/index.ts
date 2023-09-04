@@ -5,8 +5,8 @@ import Items from "../src/static/json/Items.json";
 import { join } from "path";
 const app = express();
 
-GlobalFonts.registerFromPath(join(__dirname + "/static/fonts/MinecraftBold-nMK1.otf"), "MinecraftBold");
-GlobalFonts.registerFromPath(join(__dirname + "/static/fonts/MinecraftRegular-Bmg3.otf"), "MinecraftRegular");
+GlobalFonts.registerFromPath(join(__dirname + "../src/static/fonts/MinecraftBold-nMK1.otf"), "MinecraftBold");
+GlobalFonts.registerFromPath(join(__dirname + "../src/static/fonts/MinecraftRegular-Bmg3.otf"), "MinecraftRegular");
 
 app.get("/api/advancement", async (req, res) => {
     let { item, title, message, color } = req.query;
@@ -49,11 +49,11 @@ app.get("/api/advancement", async (req, res) => {
 });
 
 const getGUI = (gui: string) => {
-    return fs.readFileSync(`src/static/gui/${gui}.png`);
+    return fs.readFileSync(`./src/static/gui/${gui}.png`);
 }
 
 const getItem = (item: string) => {
-    return fs.readFileSync(`src/static/item/${item}.png`);
+    return fs.readFileSync(`./src/static/item/${item}.png`);
 }
 
 app.listen(3000, () => {
