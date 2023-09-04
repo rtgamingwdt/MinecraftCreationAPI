@@ -1,7 +1,7 @@
 import { GlobalFonts, Image, createCanvas } from "@napi-rs/canvas";
 import express from "express";
 import fs from "fs";
-import Items from "./static/json/Items.json";
+import Items from "../src/static/json/Items.json";
 import { join } from "path";
 const app = express();
 
@@ -59,3 +59,5 @@ const getItem = (item: string) => {
 app.listen(3000, () => {
     console.log("Listening on port 3000!");
 });
+
+export default app;

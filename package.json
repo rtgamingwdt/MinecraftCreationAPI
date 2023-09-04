@@ -1,10 +1,10 @@
 {
   "name": "AdvancementsCreator",
   "version": "1.0.0",
-  "main": "src/main.ts",
+  "main": "api/index.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/main.ts"
+    "dev": "nodemon api/index.ts"
   },
   "dependencies": {
     "@napi-rs/canvas": "0.1.20",
